@@ -35,6 +35,6 @@ func gorillaMux() *mux.Router {
 
 func hello(w http.ResponseWriter, r *http.Request) {
 	short, _ := ioutil.ReadFile(yamlFile)
-	msg := "Example: http://localhost:3000/twit.ly  will take redirect you to twitter.com\n\n" + string(short)
+	msg := "Example: http://localhost:3000/twit.ly  will redirect you to https://twitter.com\n\n" + string(short)
 	fmt.Fprintln(w, msg)
 }
